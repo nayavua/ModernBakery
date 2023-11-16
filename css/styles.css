@@ -8,7 +8,9 @@
 }
 
 /* Base */
-*{
+*,
+::before,
+::after{
     box-sizing: border-box;
 }
 body{
@@ -22,6 +24,9 @@ body{
 }
 h1,h2,h3,h4,h5,h6,p{
     margin-top: 0;
+}
+a{
+    display: inline-block;
 }
 address{
     font-style: normal;
@@ -128,7 +133,7 @@ ul{
 }
 .section-title{
     font-size: 64px;
-    font-weight: 900;
+    font-weight: 600;
     line-height: 1.3;
 }
 .section-title.centered{
@@ -165,6 +170,7 @@ ul{
 .traditions-text.limited {
     max-width: 340px;
 }
+
 /* Chefs section */
 .chefs-title {
     max-width: 520px;
@@ -175,6 +181,12 @@ ul{
     font-size: 40px;
     font-weight: 600;
 }
+.chef-text p{
+    margin-bottom: 24px;
+}
+.chef-text p:last-child{
+    margin-bottom: 0;
+}
 .chefs-title::before,
 .chefs-title::after{
     display: block;
@@ -182,12 +194,29 @@ ul{
     border: 2px solid var(--color-brand-light);
     content: '';
 }
+.chefs-list{
+display: flex;
+gap: 40px 30px;
+flex-wrap: wrap;
+}
+.chefs-item{
+    flex-basis: calc((100% - 30px) / 2);
+}
+.chef-card{
+    display: flex;
+    gap: 30px;
+}
 .chef-photo{
     border-radius: 4px 4px 4px 200px;
     box-shadow: -16px 16px 0 0 var(--color-primary-light), -16px 16px 0 2px var(--color-secondary-dark);
 }
 
 /* Formats section */
+.formats-container{
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
 .formats-list{
     display: flex;
     gap: 20px;
@@ -216,6 +245,7 @@ ul{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
     width: 44px;
     height: 44px;
     padding: 0;
@@ -231,10 +261,40 @@ ul{
     fill: var(--color-primary-light);
 }
 /* Contact section */
+.contact-section{
+    padding-bottom: 96px;
+}
+.contact-container{
+    display: flex;
+    gap: 32px;
+}
 .contacts-title{
     margin-bottom: 16px;
 }
+.contact-map{
+    flex-shrink: 0;
+    border: none;
+    border-radius: 16px;
+}
 /* Footer */
+.footer{
+    padding: 32px 0;
+}
+.footer-container{
+    display: flex;
+    gap: 20px;
+}
+.footer-nav, .footer-address{
+    display: flex;
+    flex-basis: 50%;
+    gap: 20px;
+}
+.footer-logo, .footer-menu{
+    flex-grow: 1;
+}
+.address-list, .address-info{
+    flex-grow: 1;
+}
 .footer{
     background-image: url(../images/footer-background.png);
     background-color: var(--color-primary-dark);
