@@ -1,0 +1,14 @@
+.section {
+    padding: 48px 0;
+    /*96:2=48. для секцій недоречно юзати margin 92,тре падінги*/
+    &__title {
+        font-size: 64px;
+        font-weight: 600;
+        line-height: 1.3;
+
+        &--centered {
+            text-align: center;
+            }
+        }
+   
+} 
