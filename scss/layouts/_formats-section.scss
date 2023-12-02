@@ -3,19 +3,22 @@
             margin-bottom: 80px;
         }
 
-    &__container{
+    &__slider{
         display: flex;
         gap: 32px;
         align-items: center;
     }
-
-    &__list {
-            display: flex;
-            gap: 20px;
-        }
-    
-    &__item {
-            flex-basis: calc((100% - 40px) / 3);
-        }
+    &__container {
+        overflow: hidden;
+    }
+    &__list{
+        margin-bottom: 32px;
+    }
+    &__button{
+        display: none;
+        @media screen and (min-width: $bp-tablet) {
+                display: flex;
+            }
+    }
 }
 
