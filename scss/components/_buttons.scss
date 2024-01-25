@@ -7,9 +7,18 @@
     border-radius: 8px;
     cursor: pointer;
     font-weight: 600;
+    transition: color .3s;
 }
 
 .button:hover {
     color: var(--color-brand-dark);
     background-color: transparent;
+} 
+ 
+.modal__btn-close,
+.mobile-menu__btn-close {
+    background: none;
+    border: none;
+    padding: 0;
 }
+
